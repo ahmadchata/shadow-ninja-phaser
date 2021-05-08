@@ -1,27 +1,25 @@
 {
   "name": "shadow-ninja-phaser",
   "version": "1.0.0",
-  "description": "An RPG game",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "serve": "webpack serve",
+    "watch": "webpack --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahmadchata/shadow-ninja-phaser.git"
-  },
-  "author": "Ahmad Chata",
+  "repository": "git@github.com:ahmadchata/shadow-ninja-phaser.git",
+  "author": "Ahmad Chata <ahmadchata@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ahmadchata/shadow-ninja-phaser/issues"
-  },
-  "homepage": "https://github.com/ahmadchata/shadow-ninja-phaser#readme",
   "devDependencies": {
-    "babel-loader": "^8.2.2",
+    "babel-core": "6",
+    "babel-loader": "7.0.0",
     "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^8.1.1",
     "webpack": "^5.36.2",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "phaser": "^3.54.0"
