@@ -5,6 +5,7 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     app: "./src/index.js",
+    "production-dependencies": ["phaser"],
   },
 
   output: {
@@ -36,6 +37,10 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "src/index.html"),
+          to: path.resolve(__dirname, "build"),
+        },
+        {
+          from: path.resolve(__dirname, "assets", "**", "*"),
           to: path.resolve(__dirname, "build"),
         },
       ],
